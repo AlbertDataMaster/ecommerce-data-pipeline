@@ -93,3 +93,56 @@ Debes visualizar estos números de registros:
 
 "No se puede conectar al puerto 5432": Tienes otro PostgreSQL instalado y encendido en tu PC. Apágalo antes de correr Docker.
 "Comando python3 no encontrado": Asegúrate de haber marcado la casilla "Add Python to PATH" durante la instalación de Python.
+
+---
+
+### Etapa 2 (Orquestación e Ingesta)
+
+1. Preparación del Entorno
+Antes de empezar, asegúrate de que los contenedores estén encendidos:
+
+Abre la Terminal en la carpeta del proyecto.
+
+Ejecuta el comando:
+
+```bash
+docker-compose up -d
+```
+Espera 30 segundos a que todos los servicios (Postgres, Airflow y pgAdmin) se estabilicen.
+
+---
+
+2. Validación en Airflow (Automatización)
+
+Para verificar que el proceso de carga de datos está automatizado:
+Abre tu navegador y ve a: http://localhost:8081.
+Usuario: admin / Contraseña: admin.
+En el listado, busca el DAG llamado 01_ingesta_oltp_ecommerce.
+Asegúrate de que el interruptor azul a la izquierda del nombre esté en ON.
+Haz clic en el botón de Play (Trigger DAG) a la derecha.
+Verificación: Si aparece un círculo verde en la columna "Last Run", la ingesta fue exitosa.
+
+---
+
+3. Validación en pgAdmin (Base de Datos)
+Para confirmar que los datos realmente llegaron a la base de datos:
+
+Abre en tu navegador: http://localhost:8080.
+Inicio de sesión en pgAdmin:
+Email: admin@admin.com
+Password: admin
+
+Conectar al Servidor:
+
+Si no ves el servidor a la izquierda, haz clic derecho en Servers > Register > Server.
+En la pestaña Connection, usa:
+
+Host: postgres_oltp
+Username: Portafolio2026@
+Password: Portafolio2026@
+
+Consulta de Datos:
+
+Navega por: Databases > Source > Schemas > public > Tables.
+Haz clic derecho en la tabla products y selecciona View/Edit Data > All Rows.
+

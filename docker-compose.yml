@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  # Base de Datos Transaccional (OLTP)
+  postgres_oltp:
+    image: postgres:15
+    container_name: postgres_oltp
+    restart: always
+    environment:
+      POSTGRES_USER: Portafolio2026@
+      POSTGRES_PASSWORD: Portafolio2026@ 
+      POSTGRES_DB: Source
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+      - ./init_db:/docker-entrypoint-initdb.d # Para cargar datos automáticamente al iniciar
+
+  # (Opcional) Interfaz visual para la BD
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin_container
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8080:80"
+    depends_on:
+      - postgres_oltp

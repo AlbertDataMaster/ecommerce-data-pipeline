@@ -1,0 +1,10 @@
+# Python
+venv/
+__pycache__/
+*.py[cod]
+
+# Docker y Base de Datos
+postgres_data/
+
+# Sistema Operativo
+.DS_Store

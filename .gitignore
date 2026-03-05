@@ -8,3 +8,16 @@ postgres_data/
 
 # Sistema Operativo
 .DS_Store
+
+# --- Airflow e Infraestructura ---
+logs/
+airflow.db
+airflow.cfg
+webserver_config.py
+postgres_data/
+*.log
+
+# --- Python y Sistema ---
+venv/
+__pycache__/
+.DS_Store

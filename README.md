@@ -1,18 +1,19 @@
-# 🛒 eCommerce Data Pipeline - Etapa 1 (OLTP)
+# 🛒 eCommerce Data Pipeline (Etapa 1: OLTP)
 
-Este proyecto implementa la primera fase de un ecosistema de datos profesional, configurando una base de datos transaccional (OLTP) como origen.
+Este proyecto crea una base de datos profesional con más de 150,000 registros de ventas. Está diseñado para ser ejecutado con un solo clic gracias a Docker.
 
-## 🏗️ Arquitectura de la Etapa 1
-Se utiliza Docker para orquestar los servicios y Python para la ingesta inicial de datos.
+## 📋 Requisitos Previos
+Antes de empezar, asegúrate de tener instalado:
+1. **Docker Desktop** (Descárgalo aquí: [docker.com](https://www.docker.com/))
+2. **Python 3.10 o superior**
+3. **Git**
 
+---
 
+## 🚀 Guía de Instalación (Paso a Paso)
 
-## 🛠️ Requisitos
-- Docker Desktop
-- Python 3.10+
-
-## 🚀 Instalación Paso a Paso
-
-1. **Levantar contenedores:**
-   ```bash
-   docker-compose up -d
+### Paso 1: Clonar el Proyecto
+Abre una terminal en tu computadora y escribe:
+```bash
+git clone [https://github.com/AlbertDataMaster/ecommerce-data-pipeline.git](https://github.com/AlbertDataMaster/ecommerce-data-pipeline.git)
+cd ecommerce-data-pipeline

@@ -74,4 +74,4 @@ Nota: No lo actives aún hasta completar el Stage 03, ya que este requiere las c
 Esto emula la Gestión de Secretos y Conexiones de una empresa. En lugar de escribir la contraseña directamente en el código del ETL (lo cual es un riesgo de seguridad), se guarda en el "Bóveda" de Airflow. Así, el código solo pregunta por postgres_default y Airflow entrega las llaves de forma segura.
 
 
-### [🔹 Fase 3: Ingesta en la Nube y Seguridad (GCP)](docs/STAGE_03.md)
+👉 **Ir a [STAGE_03.md: Orquestación con Airflow](STAGE_03.md)**

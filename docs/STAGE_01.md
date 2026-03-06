@@ -127,4 +127,4 @@ Al finalizar este hito, hemos recreado con éxito el escenario de origen. Tenemo
 
 Este es el "caos" de datos transaccionales que ahora, en la Etapa 2, vamos a organizar y orquestar para que puedan viajar hacia la nube.
 
-### [🔹 Fase 2: Orquestación y Control de Flujos](docs/STAGE_02.md)
+👉 **Ir a [STAGE_02.md: Orquestación con Airflow](STAGE_02.md)**

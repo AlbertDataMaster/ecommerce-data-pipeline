@@ -15,8 +15,7 @@ TABLES = [
     "inventory_items", 
     "orders", 
     "order_items", 
-    "events",
-    "distribution_centers"
+    "events"
 ]
 
 def seed_local_data():

@@ -1,23 +1,43 @@
-# Python
+# ==========================================
+# 🐍 Python & Entorno Virtual
+# ==========================================
 venv/
+.venv/
+env/
 __pycache__/
 *.py[cod]
+*$py.class
+.pytest_cache/
 
-# Docker y Base de Datos
+# ==========================================
+# 🐳 Docker & Base de Datos
+# ==========================================
+# Ignora los datos persistentes de la DB para que no pesen en el repo
 postgres_data/
 
-# Sistema Operativo
-.DS_Store
-
-# --- Airflow e Infraestructura ---
+# ==========================================
+# 💨 Airflow
+# ==========================================
 logs/
 airflow.db
 airflow.cfg
 webserver_config.py
-postgres_data/
+unittests.cfg
 *.log
 
-# --- Python y Sistema ---
-venv/
-__pycache__/
+# ==========================================
+# 🔐 Seguridad (Google Cloud & Keys)
+# ==========================================
+# Ignoramos los archivos JSON de llaves, pero NO la carpeta completa.
+# Esto permite subir archivos de texto (.md o .txt) dentro de /credentials.
+credentials/*.json
+*.json
+.env
+
+# ==========================================
+# 🖥️ Sistema Operativo
+# ==========================================
 .DS_Store
+Thumbs.db
+.idea/
+.vscode/

@@ -43,6 +43,7 @@ services:
     volumes:
       - ./dags:/opt/airflow/dags
       - .:/opt/airflow/
+      - ./data:/opt/airflow/data
     depends_on:
       - postgres_oltp
 
@@ -53,8 +54,10 @@ services:
     environment:
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
       - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://Portafolio2026%40:Portafolio2026%40@postgres_oltp:5432/Source
+      - AIRFLOW__CORE__TEST_CONNECTION=Enabled
     volumes:
       - ./dags:/opt/airflow/dags
       - .:/opt/airflow/
+      - ./credentials:/opt/airflow/credentials
     depends_on:
       - postgres_oltp

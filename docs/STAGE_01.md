@@ -1,6 +1,8 @@
 ### 📄 STAGE_01.md: Configuración del Sistema de Origen (OLTP)
+
 Metodología de la Etapa:
 En esta fase inicial, aplicamos el principio de Aislamiento de Entornos. En lugar de instalar bases de datos y lenguajes de programación directamente en su computadora (evitando conflictos de versiones), utilizamos Docker. La metodología consiste en levantar un ecosistema transaccional donde Airflow no solo orquestará tareas en el futuro, sino que proveerá el motor de ejecución para nuestra carga inicial de datos (Seeding), garantizando que el dataset de +150,000 registros sea consistente para cualquier usuario.
+
 ---
 
 ### 1. Requerimientos Técnicos (Instalación de Herramientas)
@@ -117,3 +119,12 @@ Para confirmar que lo lograste, vamos a entrar al administrador visual:
 ¡Listo! Ve a Databases > Source > Schemas > Public > Tables. Deberías ver tablas como users y orders con miles de filas.
 
 ![alt text](image-8.png)
+
+---
+
+### 🎯 Conclusión de la Etapa
+Al finalizar este hito, hemos recreado con éxito el escenario de origen. Tenemos una base de datos con +150,000 registros que simulan un historial de ventas real.
+
+Este es el "caos" de datos transaccionales que ahora, en la Etapa 2, vamos a organizar y orquestar para que puedan viajar hacia la nube.
+
+### [🔹 Fase 2: Orquestación y Control de Flujos](docs/STAGE_02.md)

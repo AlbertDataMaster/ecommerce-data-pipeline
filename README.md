@@ -1,4 +1,4 @@
-# 🚀 🚀 End-to-End eCommerce Data Pipeline: From OLTP to Cloud Data Warehouse
+# 🚀 End-to-End eCommerce Data Pipeline: From OLTP to Cloud Data Warehouse
 
 ### 📖 Introducción
 Este proyecto desarrolla una infraestructura de datos completa para un ecosistema de E-commerce, utilizando un dataset público de alta fidelidad que simula operaciones reales (usuarios, productos, pedidos y eventos de tráfico web).

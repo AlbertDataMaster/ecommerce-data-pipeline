@@ -33,6 +33,15 @@ Para facilitar la auditoría técnica y la replicabilidad, el proyecto se ha doc
 * Implementación de políticas de seguridad mediante Service Accounts y manejo de secretos.
 * Validación de calidad y disponibilidad de datos en Google Cloud Console.
 
+
+### [🔹 Fase 4: Core Data Layer y Modelado Dimensional](docs/STAGE_04.md)
+* **Construcción del Core Data Layer (CDL):** Transformación de datos crudos a un modelo analítico.
+* **Modelo Estrella (Star Schema):** Diseño de dimensiones maestras y tablas de hechos centralizadas.
+* **Performance Tuning en BigQuery:** Implementación de Particionamiento (Time-unit) y Clustering (Multi-column) para optimización de costos y velocidad.
+* **Encapsulamiento de Lógica:** Creación de Stored Procedures para garantizar la idempotencia del pipeline.
+
+
+
 ## 🛠️ Tecnologías
 `Docker` | `PostgreSQL` | `Apache Airflow` | `Python` | `Google BigQuery`
 

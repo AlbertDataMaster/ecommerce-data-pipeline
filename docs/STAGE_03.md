@@ -75,7 +75,7 @@ Entra a tu consola de Google BigQuery. Si todo salió bien, verás tus tablas (u
 
 "Contamos con un sistema funcional, versionado y documentado que permite migrar datos de forma automática, eliminando procesos manuales y errores humanos."
 
-
+👉 **Ir a [STAGE_04: Core Data Layer (CDL) & Dimensional Modeling](STAGE_04.md)**
 
 
 

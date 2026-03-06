@@ -1,4 +1,4 @@
-### 📄 STAGE_01.md: Configuración del Sistema de Origen (OLTP)
+### 📄 STAGE_01: Configuración del Sistema de Origen (OLTP)
 
 Metodología de la Etapa:
 En esta fase inicial, aplicamos el principio de Aislamiento de Entornos. En lugar de instalar bases de datos y lenguajes de programación directamente en su computadora (evitando conflictos de versiones), utilizamos Docker. La metodología consiste en levantar un ecosistema transaccional donde Airflow no solo orquestará tareas en el futuro, sino que proveerá el motor de ejecución para nuestra carga inicial de datos (Seeding), garantizando que el dataset de +150,000 registros sea consistente para cualquier usuario.

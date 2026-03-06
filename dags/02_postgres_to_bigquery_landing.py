@@ -45,7 +45,7 @@ with DAG(
 ) as dag:
 
     # Lista completa de tablas del origen ecommerce
-    tablas_ecommerce = ['users', 'products', 'orders', 'order_items', 'inventory_items', 'events' , 'distribution_centers']
+    tablas_ecommerce = ['users', 'products', 'orders', 'order_items', 'inventory_items', 'events' ]
 
     for tabla in tablas_ecommerce:
         PythonOperator(

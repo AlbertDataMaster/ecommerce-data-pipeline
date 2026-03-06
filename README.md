@@ -146,3 +146,127 @@ Consulta de Datos:
 Navega por: Databases > Source > Schemas > public > Tables.
 Haz clic derecho en la tabla products y selecciona View/Edit Data > All Rows.
 
+---
+
+### 🛒 E-Commerce Data Pipeline: OLTP a BigQuery (Etapa 3)
+Bienvenido a la tercera fase del ecosistema de datos. En esta etapa, hemos implementado un pipeline robusto que extrae datos de un sistema transaccional PostgreSQL y los carga en una zona de aterrizaje (Landing Zone) en Google BigQuery, utilizando Apache Airflow como orquestador.
+
+### 🏗️ Arquitectura del Proyecto
+El flujo de datos sigue este camino:
+
+Origen (OLTP): Base de datos PostgreSQL alojada en Docker (postgres_oltp) con esquemas de e-commerce poblados mediante scripts de Python.
+
+Orquestación: Apache Airflow gestionando DAGs para la ingesta y migración.
+
+Destino (OLAP): Google BigQuery (Landing Zone) para almacenamiento a escala de nube.
+
+### 🚀 Guía de Configuración Rápida
+1. Requisitos Previos
+Docker y Docker Compose.
+
+Cuenta de Google Cloud Platform con un proyecto activo.
+
+Archivo de credenciales .json de una cuenta de servicio con permisos de BigQuery.
+
+2. Configuración de Credenciales
+Descargue su archivo de llave JSON de GCP.
+
+Colóquelo en la carpeta /credentials del repositorio local.
+
+Seguridad: El archivo .json está protegido por el .gitignore para evitar filtraciones en el repositorio público.
+
+3. Conexiones en la Interfaz de Airflow
+Para que los DAGs funcionen, debe configurar las siguientes conexiones en Admin > Connections:
+
+postgres_default (PostgreSQL):
+
+Host: postgres_oltp
+
+Schema: Source
+
+Login/Password: Portafolio2026@
+
+Port: 5432
+
+### google_cloud_default (Google Cloud):
+
+Project Id: Su ID de proyecto de GCP.
+
+Keyfile Path: /opt/airflow/credentials/su-archivo.json.
+
+
+### Gemini ha dicho
+¡Excelente! Ahora que los datos están fluyendo desde tu base de datos local hacia la nube, vamos a crear un README principal de alto impacto. Este documento no solo servirá como manual técnico, sino como una carta de presentación que demuestra tu capacidad para diseñar arquitecturas de datos completas.
+
+He redactado este contenido basándome en los avances que hemos logrado, integrando las instrucciones de configuración, conexiones y el flujo de datos que ya tienes funcionando.
+
+📝 Manual de Implementación: E-Commerce Data Pipeline (Etapa 3)
+Puedes copiar y pegar este contenido en tu archivo README.md principal:
+
+🛒 E-Commerce Data Pipeline: OLTP a BigQuery (Etapa 3)
+Bienvenido a la tercera fase del ecosistema de datos. En esta etapa, hemos implementado un pipeline robusto que extrae datos de un sistema transaccional PostgreSQL y los carga en una zona de aterrizaje (Landing Zone) en Google BigQuery, utilizando Apache Airflow como orquestador.
+
+🏗️ Arquitectura del Proyecto
+El flujo de datos sigue este camino:
+
+Origen (OLTP): Base de datos PostgreSQL alojada en Docker (postgres_oltp) con esquemas de e-commerce poblados mediante scripts de Python.
+
+Orquestación: Apache Airflow gestionando DAGs para la ingesta y migración.
+
+Destino (OLAP): Google BigQuery (Landing Zone) para almacenamiento a escala de nube.
+
+🚀 Guía de Configuración Rápida
+1. Requisitos Previos
+Docker y Docker Compose.
+
+Cuenta de Google Cloud Platform con un proyecto activo.
+
+Archivo de credenciales .json de una cuenta de servicio con permisos de BigQuery.
+
+2. Configuración de Credenciales
+Descargue su archivo de llave JSON de GCP.
+
+Colóquelo en la carpeta /credentials del repositorio local.
+
+Seguridad: El archivo .json está protegido por el .gitignore para evitar filtraciones en el repositorio público.
+
+3. Conexiones en la Interfaz de Airflow
+Para que los DAGs funcionen, debe configurar las siguientes conexiones en Admin > Connections:
+
+postgres_default (PostgreSQL):
+
+Host: postgres_oltp
+
+Schema: Source
+
+Login/Password: Portafolio2026@
+
+Port: 5432
+
+google_cloud_default (Google Cloud):
+
+Project Id: Su ID de proyecto de GCP.
+
+Keyfile Path: /opt/airflow/credentials/su-archivo.json.
+
+### ⚙️ Ejecución de los DAGs
+DAG 01: Ingesta OLTP
+Tarea: Ejecuta el script seed_data.py dentro del contenedor.
+
+Resultado: Pobla las tablas locales en PostgreSQL (products, orders, events, etc.) a partir de archivos CSV.
+
+DAG 02: Migración a BigQuery Landing
+Tarea: Extrae los datos de PostgreSQL y los carga en el dataset landing_ecommerce de BigQuery.
+
+Resultado: Refleja la estructura transaccional en la nube para su posterior transformación.
+
+### 🛠️ Tecnologías Utilizadas
+Docker: Containerización de servicios.
+
+PostgreSQL: Almacenamiento transaccional.
+
+Apache Airflow: Orquestación de flujos ETL.
+
+Google BigQuery: Data Warehouse empresarial.
+
+Python (Pandas & SQLAlchemy): Procesamiento y carga de datos.

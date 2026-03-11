@@ -112,4 +112,4 @@ Partitioning,"Pestaña ""Details"" -> Partitioned by: sale_date."
 Clustering,"Pestaña ""Details"" -> Clustered by: product_id, user_id, status."
 Data Types,"Pestaña ""Schema"" -> Los IDs deben ser INTEGER y precios NUMERIC."
 
-
+👉 **Ir a [🔹 Fase 5: Reporting Data Layer (RDL) e Inteligencia Artificial ](STAGE_05.md)**

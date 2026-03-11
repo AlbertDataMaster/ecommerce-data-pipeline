@@ -40,7 +40,7 @@ Para facilitar la auditoría técnica y la replicabilidad, el proyecto se ha doc
 * **Performance Tuning en BigQuery:** Implementación de Particionamiento (Time-unit) y Clustering (Multi-column) para optimización de costos y velocidad.
 * **Encapsulamiento de Lógica:** Creación de Stored Procedures para garantizar la idempotencia del pipeline.
 
-### [🔹 Fase 5: Reporting Data Layer (RDL) e Inteligencia Artificial ](docs/STAGE_04.md)
+### [🔹 Fase 5: Reporting Data Layer (RDL) e Inteligencia Artificial ](docs/STAGE_05.md)
 
 * **Materialización Final:** Creación de la tabla de hechos de reporteo optimizada con lógica de negocio desde GCS.
 * **Implementación de IA (BigQuery ML):** Desarrollo de un modelo predictivo ARIMA_PLUS para forecast de ventas a 30 días.

@@ -38,6 +38,7 @@ services:
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
       - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://Portafolio2026%40:Portafolio2026%40@postgres_oltp:5432/Source
       - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - _PIP_ADDITIONAL_REQUIREMENTS=apache-airflow-providers-google
     ports:
       - "8081:8080"
     volumes:
@@ -55,6 +56,7 @@ services:
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
       - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://Portafolio2026%40:Portafolio2026%40@postgres_oltp:5432/Source
       - AIRFLOW__CORE__TEST_CONNECTION=Enabled
+      - _PIP_ADDITIONAL_REQUIREMENTS=apache-airflow-providers-google
     volumes:
       - ./dags:/opt/airflow/dags
       - .:/opt/airflow/
